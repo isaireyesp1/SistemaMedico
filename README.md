@@ -46,49 +46,58 @@ mysql> use mysql;
 mysql> update user set password=PASSWORD("sa") where User='root';
 mysql> flush privileges;
 mysql> quit;
-🗄️ Importación de la Base de Datos
+```
+## 🗄️ Importación de la Base de Datos
 Iniciar el servidor MySQL
 Importar el esquema de la base de datos:
+```
 mysql> source <ruta>/db_dump.sql
+```
 Desde la línea de comandos, ingresar a la carpeta del proyecto
 Ejecutar el archivo principal:
+```
 <project>/dist/OpenMRMSys.jar
-📡 Integración de SMS
+```
+## 📡 Integración de SMS
 ⚠️ Configuración externa para la JVM (Altamente recomendada)
 
 Los archivos necesarios se encuentran en la carpeta <extras> del proyecto.
 
-📌 Copiar estos archivos al classpath de Java
+## 📌 Copiar estos archivos al classpath de Java
 Generalmente ubicado en:
-
+```
 C:\Program Files\Java
-📦 Instalación de Java Comm
+```
+## 📦 Instalación de Java Comm
+```
 comm.jar → JDKDIR/jre/lib/ext/
 javax.comm.properties → JDKDIR/jre/lib/
 Librerías (ej. win32com.dll o .so en Linux) → JDKDIR/jre/bin/
-
+```
 Si tienes un JRE separado, repetir el proceso en el directorio JRE.
 
-📦 Instalación de RxTx
+## 📦 Instalación de RxTx
+```
 RXTXcomm.jar → JDKDIR/jre/lib/ext/
 Librerías necesarias (ej. librxtxSerial.so) → JDKDIR/jre/bin/
-
+```
 Aplicar lo mismo si existe un JRE independiente.
 
-🧰 Herramientas de Terceros Utilizadas
+## 🧰 Herramientas de Terceros Utilizadas
 
 (01) Jasper Reporting
 (02) SMSLib API
 (03) Rome XML Parser
 
-🛠️ Solución de Problemas
+## 🛠️ Solución de Problemas
 
 Si ocurre un error como:
-
+```
 Java.lang.ClassNotFoundException
-
+```
 📌 Copiar los archivos JAR necesarios en las siguientes rutas y reiniciar la aplicación:
-
+```
 Linux
 /jre/lib
 /jre/lib/ext
+```
